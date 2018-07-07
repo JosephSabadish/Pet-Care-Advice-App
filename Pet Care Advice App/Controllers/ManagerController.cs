@@ -6,12 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace Pet Care Advice App.Controllers
+namespace PetCareAdviceApp.Controllers
 {
     public class ManagerController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult ManagerResults()
+        {
+            return View();
+        }
+
+        public IActionResult ManagerView()
         {
             return View();
         }
