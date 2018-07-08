@@ -19,6 +19,11 @@ namespace PetCareAdviceApp.ViewModels
         public string Password { get; set; }
         //Redirect(Home/Login)  If there are errors, reload the login screen and show them.
         //Redirect(Home/Results) If no errors, redirect to the results screen.
+        
+        //The user sees erros from this page,
+        //If there are any in the Login form,
+        //ViewBag.Login
+        //List<Login> = new list login
 
     }
 }
