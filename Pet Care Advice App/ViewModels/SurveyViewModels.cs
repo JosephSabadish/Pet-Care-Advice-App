@@ -74,6 +74,12 @@ namespace PetCareAdviceApp.ViewModels
 
         //Validate code and show other error messages.
         //(Error.IsValid.ShowAll)
+        
+        //The user sees errors from this page if there are any
+        //in the Survey form.
+        
+        //ViewBag(survey)
+        //List<Survey> = new List <survey>
 
 
 
