@@ -33,7 +33,7 @@ namespace Pet_Care_Advice_App.Controllers
         {
             // List of login information
 
-            return View(); //Returns the Login view with the logins parameter as a variable
+            return View(); //Returns the Login view with the lognis parameter as a variable
         }
 
         public IActionResult Survey()
