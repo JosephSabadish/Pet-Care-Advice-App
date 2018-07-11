@@ -9,6 +9,7 @@ namespace PetCareAdviceApp.ViewModels
     public class SurveyViewModels
     {
         [Required(ErrorMessage = "Please enter the right number of characters")]
+        [Display(Name = "How often do you walk your pets?")]
         [StringLength(8)]
         [MaxLength(8)]
         [MinLength(5)]
@@ -17,6 +18,7 @@ namespace PetCareAdviceApp.ViewModels
         //Redirect(Home/Results) If no errors, redirect to the results screen.
 
         [Required(ErrorMessage = "Please enter the right number of characters")]
+        [Display(Name = "How often are your pets taken to a vet?")]
         [StringLength(8)]
         [MaxLength(8)]
         [MinLength(5)]
@@ -25,6 +27,7 @@ namespace PetCareAdviceApp.ViewModels
         //Redirect(Home/Results) If no errors, redirect to the results screen.
 
         [Required(ErrorMessage = "Please enter the right number of characters")]
+        [Display(Name = "How often are your pets groomed?")]
         [StringLength(8)]
         [MaxLength(8)]
         [MinLength(5)]
@@ -33,6 +36,7 @@ namespace PetCareAdviceApp.ViewModels
         //Redirect(Home/Results) If no errors, redirect to the results screen.
 
         [Required(ErrorMessage = "Please enter the right number of characters")]
+        [Display(Name = "How many pets do you have?")]
         [StringLength(2)]
         [MaxLength(2)]
         [MinLength(1)]
@@ -41,6 +45,7 @@ namespace PetCareAdviceApp.ViewModels
         //Redirect(Home/Results) If no errors, redirect to the results screen.
 
         [Required(ErrorMessage = "Please enter the right number of characters")]
+        [Display(Name = "How many of each pet do you have?")]
         [StringLength(2)]
         [MaxLength(2)]
         [MinLength(1)]
@@ -49,6 +54,7 @@ namespace PetCareAdviceApp.ViewModels
         //Redirect(Home/Results) If no errors, redirect to the results screen.
 
         [Required(ErrorMessage = "Please enter the right number of characters")]
+        [Display(Name = "How many pet accessories do you have?")]
         [StringLength(1)]
         [MaxLength(2)]
         [MinLength(1)]
@@ -57,6 +63,7 @@ namespace PetCareAdviceApp.ViewModels
         //Redirect(Home/Results) If no errors, redirect to the results screen.
 
         [Required(ErrorMessage = "Please enter the right number of characters")]
+        [Display(Name = "How often do you feed your pets?")]
         [StringLength(8)]
         [MaxLength(5)]
         [MinLength(5)]
@@ -65,6 +72,7 @@ namespace PetCareAdviceApp.ViewModels
         //Redirect(Home/Results) If no errors, redirect to the results screen.
 
         [Required(ErrorMessage = "Please enter the right number of characters")]
+        [Display(Name = "How often do you maintain your pet living quarters?")]
         [StringLength(8)]
         [MaxLength(5)]
         [MinLength(5)]
@@ -74,13 +82,12 @@ namespace PetCareAdviceApp.ViewModels
 
         //Validate code and show other error messages.
         //(Error.IsValid.ShowAll)
-        
+
         //The user sees errors from this page if there are any
         //in the Survey form.
-        
+
         //ViewBag(survey)
         //List<Survey> = new List <survey>
-
 
 
 

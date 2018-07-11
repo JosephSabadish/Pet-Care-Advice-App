@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Pet_Care_Advice_App.Models;
+using PetCareAdviceApp.ViewModels;
 
 namespace Pet_Care_Advice_App.Controllers
 {
@@ -17,7 +18,7 @@ namespace Pet_Care_Advice_App.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "What this application does:";
 
             return View();
         }
@@ -29,14 +30,28 @@ namespace Pet_Care_Advice_App.Controllers
             return View();
         }
 
-        public IActionResult Login() //Methods a manager uses to login
+        public IActionResult Login()
+        {
+            LoginViewModels loginViewModel = new LoginViewModels();
+            return View();
+        }
+
+
+        [HttpGet]
+        public IActionResult Login(LoginViewModels loginViewModel) //Methods a manager uses to login
         {
             // List of login information
 
             return View(); //Returns the Login view with the lognis parameter as a variable
         }
 
+        [HttpPost]
         public IActionResult Survey()
+        {
+            return View();
+        }
+
+        public IActionResult Results()
         {
             return View();
         }

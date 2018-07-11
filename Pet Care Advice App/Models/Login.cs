@@ -17,6 +17,8 @@ namespace PetCareAdviceApp.Models
         [StringLength(10, MinimumLength = 6)]
         public string Password { get; set; } //Don't alter this
 
+        //Redirect(HomeController/Results)
+
         //Create a ViewBag object
         //public Login(string name, string password) //Don't alter this
         // {

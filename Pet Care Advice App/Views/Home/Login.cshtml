@@ -1,25 +1,26 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model PetCareAdviceApp.ViewModels.LoginViewModels
 
-<<<<<<< HEAD
-    <form>
-=======
-<form>
->>>>>>> 504364d16d38521400f9d3ccf18a969cabac7cdc
-        <br>
-        <t>Please use your credentials to log in.</t>
-        <t>If you aren't a manager, select the 'Survey' option from the menu above.</t>
-        <br>
-        <br>
-        <t>Name:</t> <input type="text" name="Name" value="" />
-        <br>
-        <br>
-        <t>Password:</t> <input type="text" name="Password" value="" />
-        <br>
-        <br>
-        <input type="submit" value="Submit" class="submit" />
-    </form>
+<h1>Login</h1>
 
-}
+<form asp-controller="ClientController" asp-action="Login" method="post">
+    
+    <div asp-validation-summary="All"></div>
+
+    <div class="form-group">
+    <label asp-for="Name"></label>
+    <input class= "form-control" asp-for="Name" />
+    </div>
+    <div class="form-group">
+    <label asp-for="Password"></label>
+    <input class= "form-control" asp-for="Password" />
+    </div>
+
+    <input type="submit" value="Submit" />
+
+</form>
+
+    
+
+
+
+

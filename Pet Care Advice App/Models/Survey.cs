@@ -47,5 +47,7 @@ namespace PetCareAdviceApp.Models
         [StringLength(9, MinimumLength = 5)]
         [RegularExpression(@"Aaaaa")]
         public string MaintainAmount { get; set; }
+
+        //Redirect(HomeController/Results)
     }
 }

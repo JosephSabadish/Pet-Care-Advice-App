@@ -1,42 +1,55 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model PetCareAdviceApp.ViewModels.SurveyViewModels
 
-    <form>
-        <br>
-        <t>Fill out the survey by typing information in the boxes below. Please capitalize the first letter of any word. </t>
-        <br>
-        <br>
-        <t> How often do you walk your pets?</t> <input name="Value1" type="text" />
-        <br>
-        <br>
-        <t> How often do you take your pets to a vet?</t> <input name="Value2" type="text" />
-        <br>
-        <br>
-        <t> How often are your pets groomed? </t> <input name="Value3" type="text" />
-        <br>
-        <br>
-        <t> How many pets do you have?</t> <input name="Value4" type="text" />
-        <br>
-        <br>
-        <t>How many of each do you have?</t> <input name="Value5" type="text" />
-        <br>
-        <br>
-        <t>How many accessories do you have?</t> <input name="Value6" type="text" />
-        <br>
-        <br>
-        <t>How often do you feed your pets?</t> <input name="Value7" type="text" />
-        <br>
-        <br>
-        <t>How often do you maintain your pet/pet's living quarters?</t> <input name="Value8" type="text" />
-        <br>
-        <br>
-        <input type="submit" value="Submit" />
+<h1>Survey</h1>   
 
-    </form>
+<form asp-controller="ClientController" asp-action="Results" method="post">
+
+    <div asp-validation-summary="All"></div>
+
+    <div class="form-group">
+        <label asp-for="WalkAmount"></label>
+        <input class="form-control" asp-for="WalkAmount" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="VetAmount"></label>
+        <input class="form-control" asp-for="VetAmount" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="GroomAmount"></label>
+        <input class="form-control" asp-for="GroomAmount" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PetNumber"></label>
+        <input class="form-control" asp-for="PetNumber" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PetTypeNumber"></label>
+        <input class="form-control" asp-for="PetTypeNumber" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AccesoryNumber"></label>
+        <input class="form-control" asp-for="AccesoryNumber" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FeedAmount"></label>
+        <input class="form-control" asp-for="FeedAmount" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MaintainAmount "></label>
+        <input class="form-control" asp-for="MaintainAmount" />
+    </div>
+
+    <input type="submit" value="Submit" />
+
+</form>
 
 
 
 
-}
