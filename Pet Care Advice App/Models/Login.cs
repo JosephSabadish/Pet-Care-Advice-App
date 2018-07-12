@@ -8,14 +8,25 @@ namespace PetCareAdviceApp.Models
 {
     public class Login
     {
-        [Required]
-        [StringLength(10, MinimumLength = 6)]
-        [RegularExpression(@"Aaaaa")]
-        public string Username { get; set; } //Don't alter this 
+        static private List<Login> logins = new List<Login>();
+    
+        // ManagerLogin
+        public static List<Login> ManagerLogin()
+        {
+            return logins;
+        }
 
-        [Required]
-        [StringLength(10, MinimumLength = 6)]
-        public string Password { get; set; } //Don't alter this
+       
+        //SAVE THE CODE BELOW THIS LINE. MAY STILL BE USEFUL
+        //[Required]
+        //[StringLength(10, MinimumLength = 6)]
+        //[RegularExpression(@"Aaaaa")]
+        //public string Name { get; set; } //Don't alter this 
+
+        //[Required]
+        //[StringLength(10, MinimumLength = 6)]
+        //public string Password { get; set; } //Don't alter this
+       
 
         //Redirect(HomeController/Results)
 

@@ -7,14 +7,15 @@ using System.ComponentModel.DataAnnotations;
 namespace PetCareAdviceApp.ViewModels
 {
     public class LoginViewModels
-    {
+    {   
         [Required]
         [Display(Name = "Enter User Name")]
         public string Name { get; set; }
     
     
-        [Required]
+       [Required]
         [Display(Name = "Enter your password")]
         public string Password { get; set; }
+        
     }
 }

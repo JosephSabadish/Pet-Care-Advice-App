@@ -33,19 +33,25 @@ namespace Pet_Care_Advice_App.Controllers
         public IActionResult Login()
         {
             LoginViewModels loginViewModel = new LoginViewModels();
-            return View();
+            return View(loginViewModel);
         }
 
-
-        [HttpGet]
-        public IActionResult Login(LoginViewModels loginViewModel) //Methods a manager uses to login
-        {
-            // List of login information
-
-            return View(); //Returns the Login view with the lognis parameter as a variable
-        }
 
         [HttpPost]
+        public IActionResult Login(LoginViewModels loginViewModel) //Methods a manager uses to login
+        {
+            HomeController newLogin = new HomeController {
+                  Name = loginViewModel.Name,
+                  Password = loginViewModel.Password
+            };
+
+            Login.Login(newLogin);
+            // List of login information
+
+            return Redirect("/HomeController"); //Returns the Login view with the lognis parameter as a variable
+        }
+
+        
         public IActionResult Survey()
         {
             return View();

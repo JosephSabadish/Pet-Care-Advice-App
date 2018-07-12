@@ -8,7 +8,7 @@ namespace PetCareAdviceApp.ViewModels
 {
     public class SurveyViewModels
     {
-        [Required(ErrorMessage = "Please enter the right number of characters")]
+        [Required]
         [Display(Name = "How often do you walk your pets?")]
         [StringLength(8)]
         [MaxLength(8)]
